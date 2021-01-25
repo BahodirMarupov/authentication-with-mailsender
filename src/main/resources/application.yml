@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    username: postgres
+    password: 1
+    url: jdbc:postgresql://localhost:5432/springauthentication
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    username: bahodirmusayevich@gmail.com
+    password: ouhjrdjwgieiunqx
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+email:
+  confirm:
+    url: http://localhost:8080/api/v1/registration/confirm?token=
